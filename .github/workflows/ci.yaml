@@ -40,7 +40,7 @@ jobs:
         with:
           version: v1.64.0
 
-  Docker push:
+  Docker-push:
     runs-on: rhel-8
     needs: [build, CodeQuality]
 
@@ -67,7 +67,7 @@ jobs:
 
   update-new-tag-helm:
     runs-on: rhel-8
-    needs: Docker push
+    needs: Docker-push
 
     steps:
       - name: Checkout code
