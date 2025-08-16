@@ -5,7 +5,7 @@ name: CI Go Web App
 on:
   push:
     branches:
-      -manin
+      -main
     paths-ignore:
       - 'helm/***'
       - 'k8/***'
