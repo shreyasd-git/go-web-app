@@ -38,11 +38,11 @@ jobs:
       - name: Run golangci-lint
         uses: golangci/golangci-lint-action@v6
         with:
-          version: v1.64.0
+          version: latest
 
   Docker-push:
     runs-on: ubuntu-latest
-    needs: [build, CodeQuality]
+    needs: build
 
     steps:
       - name: Checkout code
